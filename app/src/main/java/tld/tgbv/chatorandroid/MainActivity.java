@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public Intent LoginActivity;
     public Intent RegisterActivity;
+    private Intent FriendlistActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // set the intents
         LoginActivity = new Intent(this, LoginActivity.class);
         RegisterActivity = new Intent(this, RegisterActivity.class);
+        FriendlistActivity = new Intent(this, FriendlistActivity.class);
 
         // sets the default content view
         setContentView(R.layout.activity_main);
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // btn listener
         findViewById(R.id.intentLoginBtn).setOnClickListener(this);
         findViewById(R.id.intentRegisterBtn).setOnClickListener(this);
+        findViewById(R.id.tmpBtnFriendlist).setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +44,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.intentRegisterBtn:{
                 startActivity(RegisterActivity);
+                break;
+            }
+            
+            case R.id.tmpBtnFriendlist:{
+                startActivity(FriendlistActivity);
                 break;
             }
 
