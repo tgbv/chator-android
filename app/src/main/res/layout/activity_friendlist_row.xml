@@ -5,25 +5,38 @@
     android:id="@+id/friendlistRowLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="5pt">
+    android:padding="1pt">
 
     <TextView
         android:id="@+id/friendlistRowUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="Friend name here"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnSendMessage"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/friendlistRowRemoveUser"
-        android:layout_width="44dp"
-        android:layout_height="27dp"
-        android:padding="0dp"
-        android:text="X"
-        android:textSize="8sp"
-        app:iconPadding="0dp"
+    <ImageButton
+        android:id="@+id/btnSendMessage"
+        android:layout_width="55dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/btn_green_ripple"
+        app:layout_constraintEnd_toStartOf="@+id/btnSendMessage2"
+        app:srcCompat="@android:drawable/ic_menu_send"
+        tools:layout_editor_absoluteY="-3dp" />
+
+    <ImageButton
+        android:id="@+id/btnSendMessage2"
+        android:layout_width="55dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/btn_red_ripple"
+        android:soundEffectsEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rippleColor="#A38E8E" />
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        tools:layout_editor_absoluteY="-3dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

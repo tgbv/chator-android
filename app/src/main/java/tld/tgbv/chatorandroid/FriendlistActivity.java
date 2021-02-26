@@ -23,22 +23,11 @@ public class FriendlistActivity extends AppCompatActivity {
         // still in prototype
         ArrayList<String> users = new ArrayList();
 
-        users.add("John");
-        users.add("Doe");
-        users.add("Merry");
-        users.add("Harry");
-        users.add("John");
-        users.add("Doe");
-        users.add("Merry");
-        users.add("Harry");
-        users.add("John");
-        users.add("Doe");
-        users.add("Merry");
-        users.add("Harry");
-        users.add("John");
-        users.add("Doe");
-        users.add("Merry");
-        users.add("Harry");
+        for(short i=0; i<100; i++) {
+            users.add("John");
+            users.add("Doe");
+        }
+
 
         // get the recycle view
         RecyclerView v = findViewById( R.id.friendlistRecycleView );

@@ -1,6 +1,7 @@
 package tld.tgbv.chatorandroid.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,6 +47,12 @@ public class FriendlistViewAdapter extends RecyclerView.Adapter<FriendlistViewAd
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // render the username to the recycled view
         holder.username.setText( users.get(position) );
+
+        // set background row color so the table is striped like a zebra
+        if(position % 2 ==0)
+            holder.itemView.setBackgroundColor( Color.parseColor("#e2e2e2"));
+        else
+            holder.itemView.setBackgroundResource(R.color.white);
     }
 
     @Override
