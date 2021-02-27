@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import tld.tgbv.chatorandroid.R;
+import tld.tgbv.chatorandroid.models.Lobbies;
 
 public class FriendlistViewAdapter extends RecyclerView.Adapter<FriendlistViewAdapter.ViewHolder> {
 
@@ -60,6 +61,9 @@ public class FriendlistViewAdapter extends RecyclerView.Adapter<FriendlistViewAd
         return users.size();
     }
 
+    /*
+    *   THE VIEW HOLDER
+     */
     public static class ViewHolder extends RecyclerView.ViewHolder  {
 
         // contains user's name

@@ -36,7 +36,6 @@ public class FriendlistActivity extends AppCompatActivity {
         //v.setHasFixedSize(true);
         v.setLayoutManager( new LinearLayoutManager(this));
 
-        // idk trying..
         // assign to the recycled view
         v.setAdapter( new FriendlistViewAdapter(this, users)  );
 
